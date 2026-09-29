@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now | Bun Bun Hair Salon</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="logo">✂️ Bun Bun Hair Salon</div><button class="menu" onclick="toggleMenu()">☰</button><nav id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Book Now</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></header>
+<main class="page">
+<p class="eyebrow">APPOINTMENT</p><h1>Book your beauty appointment</h1>
+<form id="bookingForm">
+<label>Name<input id="name" required></label>
+<label>Phone<input id="phone" type="tel" required></label>
+<label>Service<select id="service" required><option value="">Select a service</option><option>Hair Dressing</option><option>Makeup</option><option>Manicure</option><option>Pedicure</option></select></label>
+<label>Location<select id="location" required><option value="">Select location</option><option>Lundazi</option><option>Kanyama / Lusaka</option><option>Service in Lusaka</option></select></label>
+<label>Preferred date<input id="date" type="date" required></label>
+<label>Preferred time<input id="time" type="time" required></label>
+<label>Message<textarea id="message" rows="4" placeholder="Any extra details?"></textarea></label>
+<button class="btn" type="submit">Send Booking via WhatsApp</button>
+</form>
+</main>
+<footer><h3>Bun Bun Hair Salon</h3><p>📞 +260 971 146 826</p><small>© 2026 Bun Bun Hair Salon</small></footer>
+<script src="script.js"></script>
+</body></html>
