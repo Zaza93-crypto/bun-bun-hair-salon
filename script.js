@@ -1,4 +1,16 @@
-const menu=document.querySelector(".menu");
-const nav=document.querySelector("nav");
-menu?.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",open);menu.textContent=open?"✕":"☰";});
-document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menu.textContent="☰";}));
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+
+menuToggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', open);
+  menuToggle.textContent = open ? '✕' : '☰';
+});
+
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  });
+});
