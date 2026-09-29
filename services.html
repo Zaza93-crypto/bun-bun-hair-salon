@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Bun Bun Hair Salon</title><link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Bun Bun Hair Salon</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#171318;background:#fff8fc;line-height:1.6}
+header{background:#fff;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f0dce8}
+.logo{font-size:25px;font-weight:800;color:#8f285f}
+nav a{color:#8f285f;text-decoration:none;font-weight:700;margin-left:22px}
+.hero{padding:70px 6%;text-align:center;background:linear-gradient(135deg,#fde8f2,#fff7fb)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#a62d70;font-weight:800;font-size:14px}
+h1{font-size:clamp(40px,8vw,64px);margin:10px 0;color:#171318}
+.hero p{max-width:650px;margin:auto;font-size:18px}
+.services{padding:55px 6%;max-width:1100px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:30px}
+.card{background:#fff;padding:28px;border-radius:22px;box-shadow:0 8px 28px rgba(120,35,80,.09);border:1px solid #f3dce8}
+.icon{font-size:42px}
+.card h2{margin:12px 0 8px;color:#8f285f}
+.card p{color:#555}
+.btn{display:inline-block;margin-top:18px;padding:12px 20px;border-radius:30px;background:#ae2f70;color:#fff;text-decoration:none;font-weight:700}
+.cta{text-align:center;padding:55px 6%;background:#fff}
+.cta h2{font-size:32px;margin-bottom:10px}
+.whatsapp{background:#8f285f}
+footer{text-align:center;padding:25px;background:#8f285f;color:#fff}
+@media(max-width:700px){header{padding:16px 5%}nav a{margin-left:10px;font-size:14px}.hero{padding:55px 6%}.services{padding:45px 5%}}
+</style>
 </head>
 <body>
-<header><div class="logo">✂️ Bun Bun Hair Salon</div><button class="menu" onclick="toggleMenu()">☰</button><nav id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Book Now</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></header>
-<main class="page">
-<p class="eyebrow">OUR SERVICES</p><h1>Beauty services for every occasion</h1>
-<div class="cards">
-<article><div class="icon">💇🏽‍♀️</div><h2>Hair Dressing</h2><p>Braiding, styling and other hair dressing services tailored to your preferred look.</p></article>
-<article><div class="icon">💄</div><h2>Makeup</h2><p>Professional makeup for everyday beauty, parties, weddings and special events.</p></article>
-<article><div class="icon">💅🏽</div><h2>Manicure</h2><p>Neat, polished and professionally finished nails.</p></article>
-<article><div class="icon">🦶🏽</div><h2>Pedicure</h2><p>Relaxing foot care and beautiful pedicure finishes.</p></article>
-</div>
-<a class="btn" href="booking.html">Book a Service</a>
-</main>
-<footer><h3>Bun Bun Hair Salon</h3><p>📞 +260 971 146 826</p><small>© 2026 Bun Bun Hair Salon</small></footer>
-<script src="script.js"></script>
-</body></html>
+<header>
+  <div class="logo">✂️ Bun Bun Hair Salon</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">What We Offer</div>
+  <h1>Our Beauty Services</h1>
+  <p>Professional beauty and personal-care services designed to help you look your best and feel confident.</p>
+</section>
+
+<section class="services">
+  <div class="grid">
+    <div class="card">
+      <div class="icon">💇🏽‍♀️</div>
+      <h2>Hair Dressing</h2>
+      <p>Professional hair styling and dressing for everyday looks, special occasions and your personal style.</p>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon,%20I%20would%20like%20to%20book%20Hair%20Dressing.">Book Service</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">💄</div>
+      <h2>Makeup</h2>
+      <p>Beautiful makeup for events, celebrations, photoshoots and special occasions.</p>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon,%20I%20would%20like%20to%20book%20Makeup.">Book Service</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">💅🏽</div>
+      <h2>Manicure</h2>
+      <p>Neat and stylish nail care to keep your hands looking polished and beautiful.</p>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon,%20I%20would%20like%20to%20book%20a%20Manicure.">Book Service</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🦶🏽</div>
+      <h2>Pedicure</h2>
+      <p>Relaxing foot and toenail care for a clean, fresh and well-groomed finish.</p>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon,%20I%20would%20like%20to%20book%20a%20Pedicure.">Book Service</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready for your next look?</h2>
+  <p>Book your appointment directly through WhatsApp.</p>
+  <a class="btn whatsapp" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon,%20I%20would%20like%20to%20book%20an%20appointment.">WhatsApp Us</a>
+</section>
+
+<footer>
+  © 2026 Bun Bun Hair Salon · Lundazi & Lusaka
+</footer>
+</body>
+</html>
