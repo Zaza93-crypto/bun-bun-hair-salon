@@ -3,154 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bun Bun Hair Salon — hair, makeup, manicure and pedicure services in Lundazi and Lusaka.">
-  <title>Bun Bun Hair Salon | Beauty That Feels Like You</title>
+  <meta name="description" content="Modern beauty and skincare landing page.">
+  <title>REVEAL — Beauty & Skincare</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Bun Bun Hair Salon home">
-      <span class="brand-mark">BB</span>
-      <span>Bun Bun<br><small>HAIR SALON</small></span>
-    </a>
 
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
 
-    <nav class="nav" id="nav">
+  <header class="nav">
+    <a class="brand" href="#">BLOOM<span>.</span></a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a class="nav-cta" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
     </nav>
+
+    <a class="nav-button" href="#contact">Book Now <span>↗</span></a>
+
+    <button class="menu-button" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main id="home">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> BEAUTY • STYLE • CONFIDENCE</p>
-        <h1>Reveal the<br><em>beauty</em> in you.</h1>
-        <p class="hero-text">Modern hair, makeup, manicure and pedicure services designed to make you feel confident, polished and completely yourself.</p>
+        <p class="eyebrow"><span></span> BEAUTY • CARE • CONFIDENCE</p>
+        <h1>REVEAL<br><em>YOUR</em><br>BEAUTY</h1>
+        <p class="hero-text">
+          Thoughtful beauty care designed to help you feel confident,
+          refreshed and completely yourself.
+        </p>
 
         <div class="hero-actions">
-          <a class="button button-primary" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Appointment ↗</a>
-          <a class="button button-ghost" href="#services">Explore Services</a>
+          <a class="primary-btn" href="#contact">Explore Beauty <span>↗</span></a>
+          <a class="text-btn" href="#services">Our services <span>→</span></a>
         </div>
 
-        <div class="mini-stats">
-          <div><strong>24/7</strong><span>Open</span></div>
-          <div><strong>4+</strong><span>Beauty Services</span></div>
-          <div><strong>2</strong><span>Main Locations</span></div>
+        <div class="stats">
+          <div><strong>20+</strong><span>Beauty<br>services</span></div>
+          <div><strong>5★</strong><span>Client<br>experience</span></div>
+          <div><strong>100%</strong><span>Personal<br>care</span></div>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="image-card main-image">
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1100&q=85" alt="Woman with beautifully styled hair">
-          <div class="image-label">
-            <span>01</span>
-            <strong>YOUR BEAUTY,<br>YOUR STYLE.</strong>
-          </div>
+      <div class="hero-visual" aria-label="Black woman beauty portrait illustration">
+        <div class="arch"></div>
+        <div class="leaf leaf-a"></div>
+        <div class="leaf leaf-b"></div>
+        <div class="leaf leaf-c"></div>
+
+        <!-- Inline SVG illustration: no shop/product photo is used. -->
+        <svg class="woman" viewBox="0 0 500 720" role="img" aria-label="Black woman beauty portrait">
+          <defs>
+            <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9a6045"/>
+              <stop offset="55%" stop-color="#70412f"/>
+              <stop offset="100%" stop-color="#4d2b22"/>
+            </linearGradient>
+            <linearGradient id="dress" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#164e36"/>
+              <stop offset="100%" stop-color="#06281c"/>
+            </linearGradient>
+          </defs>
+
+          <!-- hair -->
+          <path d="M105 275 C48 205 80 70 198 52 C327 28 408 111 390 235
+                   C381 300 350 333 332 347 L132 335 C118 316 112 296 105 275Z"
+                fill="#17130f"/>
+          <circle cx="130" cy="145" r="50" fill="#17130f"/>
+          <circle cx="350" cy="153" r="52" fill="#17130f"/>
+          <circle cx="100" cy="215" r="43" fill="#17130f"/>
+          <circle cx="377" cy="220" r="45" fill="#17130f"/>
+
+          <!-- neck and shoulders -->
+          <path d="M185 435 L183 515 L115 560 L74 720 L426 720 L385 559
+                   L317 515 L315 430Z" fill="url(#skin)"/>
+          <path d="M153 540 Q250 610 347 540 L425 720 L75 720Z" fill="url(#dress)"/>
+
+          <!-- face -->
+          <path d="M145 205 Q250 132 355 205 L342 360 Q328 437 250 478
+                   Q172 437 158 360Z" fill="url(#skin)"/>
+
+          <!-- hairline -->
+          <path d="M139 217 Q157 102 252 103 Q343 102 366 218
+                   Q326 181 291 172 Q230 198 139 217Z" fill="#17130f"/>
+
+          <!-- brows -->
+          <path d="M182 272 Q208 255 229 270" fill="none" stroke="#2a1712" stroke-width="10" stroke-linecap="round"/>
+          <path d="M271 270 Q293 255 319 272" fill="none" stroke="#2a1712" stroke-width="10" stroke-linecap="round"/>
+
+          <!-- eyes -->
+          <path d="M184 288 Q206 304 229 288 Q207 277 184 288Z" fill="#fff"/>
+          <circle cx="208" cy="290" r="7" fill="#21130f"/>
+          <path d="M271 288 Q294 304 316 288 Q294 277 271 288Z" fill="#fff"/>
+          <circle cx="293" cy="290" r="7" fill="#21130f"/>
+
+          <!-- nose -->
+          <path d="M250 282 Q239 330 245 349 Q252 356 263 350" fill="none" stroke="#4e2b21" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- lips -->
+          <path d="M222 380 Q250 362 278 380 Q251 405 222 380Z" fill="#5b1e24"/>
+          <path d="M225 381 Q250 388 275 381" fill="none" stroke="#d28a7f" stroke-width="3"/>
+
+          <!-- earrings -->
+          <circle cx="154" cy="353" r="11" fill="#d5a94d"/>
+          <circle cx="346" cy="353" r="11" fill="#d5a94d"/>
+
+          <!-- beauty highlight -->
+          <circle cx="321" cy="329" r="5" fill="#d7a28d" opacity=".7"/>
+        </svg>
+
+        <div class="floating-card card-top">
+          <span class="dot"></span>
+          <div><b>PERSONAL CARE</b><small>Designed around you</small></div>
         </div>
 
-        <div class="floating-card">
-          <span class="card-number">20+</span>
-          <span>WAYS TO<br>FEEL BEAUTIFUL</span>
+        <div class="floating-card card-bottom">
+          <b>BEAUTY<br>BEGINS<br>WITH YOU</b>
         </div>
 
-        <div class="circle-badge">BUN<br>BUN</div>
-
-        <div class="leaf leaf-one"></div>
-        <div class="leaf leaf-two"></div>
+        <div class="circle-mark">✦</div>
       </div>
     </section>
 
-    <section class="marquee">
-      <div>HAIR STYLING <span>✦</span> MAKEUP <span>✦</span> MANICURE <span>✦</span> PEDICURE <span>✦</span> SELF CARE <span>✦</span></div>
+    <section class="intro" id="about">
+      <p class="section-kicker">A MODERN BEAUTY EXPERIENCE</p>
+      <h2>Skincare and beauty,<br><i>designed for you.</i></h2>
+      <p>
+        A clean, modern beauty experience focused on personal attention,
+        effortless confidence and results that feel like you.
+      </p>
     </section>
 
-    <section class="services-section" id="services">
-      <div class="section-heading">
-        <p class="eyebrow"><span></span> OUR SERVICES</p>
-        <h2>Beauty designed<br><em>for you.</em></h2>
-        <p>From everyday elegance to your special occasion, we bring professional beauty care closer to you.</p>
+    <section class="services" id="services">
+      <div class="service-heading">
+        <p class="section-kicker">WHAT WE OFFER</p>
+        <h2>Simple rituals.<br><i>Beautiful results.</i></h2>
       </div>
 
       <div class="service-grid">
-        <article class="service-card service-image-card">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Hair styling service">
-          <div class="service-overlay">
-            <span>01</span>
-            <h3>Hair Dressing</h3>
-            <p>K80 – K300</p>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <span class="service-no">02</span>
-          <div class="service-icon">✦</div>
-          <h3>Makeup</h3>
-          <p>Professional looks for everyday beauty, events and special moments.</p>
-          <strong>K50 – K200</strong>
-        </article>
-
-        <article class="service-card">
-          <span class="service-no">03</span>
-          <div class="service-icon">◌</div>
-          <h3>Manicure</h3>
-          <p>Clean, polished nails with a relaxing salon experience.</p>
-          <strong>K150</strong>
-        </article>
-
-        <article class="service-card">
-          <span class="service-no">04</span>
-          <div class="service-icon">○</div>
-          <h3>Pedicure</h3>
-          <p>Refresh, care and finish your look from head to toe.</p>
-          <strong>K200</strong>
-        </article>
+        <article><span>01</span><h3>Skin Care</h3><p>Refreshing care tailored to your skin and routine.</p></article>
+        <article><span>02</span><h3>Beauty Care</h3><p>Polished looks for everyday confidence and special moments.</p></article>
+        <article><span>03</span><h3>Personal Styling</h3><p>Thoughtful beauty guidance that works with your style.</p></article>
       </div>
     </section>
 
-    <section class="about-section" id="about">
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=85" alt="Beauty salon interior">
-        <div class="vertical-tag">BUN BUN • BEAUTY • 2026</div>
-      </div>
-      <div class="about-copy">
-        <p class="eyebrow"><span></span> ABOUT BUN BUN</p>
-        <h2>Where your look meets your <em>confidence.</em></h2>
-        <p>We are creating a beauty experience that is modern, welcoming and accessible. Whether you are preparing for a big day or simply taking time for yourself, Bun Bun is here for you.</p>
-        <div class="location-list">
-          <div><b>Lundazi</b><span>Upstairs Area</span></div>
-          <div><b>Lusaka</b><span>Kanyama Site & service in Lusaka</span></div>
-        </div>
-        <a class="text-link" href="#contact">Find us & book <span>→</span></a>
-      </div>
-    </section>
-
-    <section class="booking-banner" id="contact">
-      <div>
-        <p class="eyebrow"><span></span> READY FOR YOUR NEXT LOOK?</p>
-        <h2>Let's make you<br><em>feel beautiful.</em></h2>
-      </div>
-      <div class="booking-side">
-        <p>Appointments and enquiries via WhatsApp.</p>
-        <a class="button button-light" href="https://wa.me/260971146826?text=Hello%20Bun%20Bun%20Hair%20Salon%2C%20I%27d%20like%20to%20make%20a%20booking." target="_blank" rel="noopener">WhatsApp Us ↗</a>
-        <span>+260 971 146 826</span>
-      </div>
+    <section class="cta" id="contact">
+      <p class="section-kicker">READY WHEN YOU ARE</p>
+      <h2>Your beauty.<br><i>Your moment.</i></h2>
+      <a class="primary-btn" href="https://wa.me/" target="_blank" rel="noopener">Book an Appointment <span>↗</span></a>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand"><span class="brand-mark">BB</span> Bun Bun Hair Salon</div>
-    <p>© 2026 Bun Bun Hair Salon. Beauty that feels like you.</p>
-    <a href="#home">Back to top ↑</a>
+    <span>BLOOM.</span>
+    <small>Beauty made personal.</small>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
