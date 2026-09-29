@@ -1,16 +1,10 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
 
-menuToggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', open);
-  menuToggle.textContent = open ? '✕' : '☰';
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('open');
 });
 
 document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.textContent = '☰';
-  });
+  link.addEventListener('click', () => nav.classList.remove('open'));
 });
