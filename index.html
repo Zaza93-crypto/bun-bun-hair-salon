@@ -1,61 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bun Bun Hair Salon</title>
-<meta name="description" content="Bun Bun Hair Salon - hair dressing, makeup, manicure and pedicure in Lundazi and Lusaka.">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bun Bun Hair Salon - professional hair, makeup, manicure and pedicure services in Lundazi and Lusaka.">
+  <title>Bun Bun Hair Salon | Beauty. Style. Confidence.</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <div class="logo">✂️ Bun Bun Hair Salon</div>
-  <button class="menu" onclick="toggleMenu()">☰</button>
-  <nav id="nav">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Book Now</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="index.html" aria-label="Bun Bun Hair Salon Home">
+      <span class="brand-icon">✂️</span>
+      <span>Bun Bun <small>Hair Salon</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a class="active" href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Book Now</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">WELCOME TO BUN BUN</p>
-    <h1>Beauty. Style.<br><span>Confidence.</span></h1>
-    <p>Professional hair dressing, makeup, manicure and pedicure services in Lundazi and Lusaka.</p>
-    <div class="buttons">
-      <a class="btn" href="booking.html">Book an Appointment</a>
-      <a class="btn outline" href="https://wa.me/260971146826">WhatsApp Us</a>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO BUN BUN</p>
+      <h1>Beauty. Style.<br><span>Confidence.</span></h1>
+      <p class="hero-text">
+        Professional hair dressing, makeup, manicure and pedicure services
+        designed to help you look and feel your best in Lundazi and Lusaka.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="booking.html">Book an Appointment</a>
+        <a class="btn btn-outline" href="https://wa.me/260971146826" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+
+      <div class="locations">
+        <span>📍 Lundazi</span>
+        <span>📍 Kanyama Site</span>
+        <span>📍 Lusaka Services</span>
+      </div>
     </div>
+
+    <div class="hero-card">
+      <div class="sparkle">✦</div>
+      <div class="scissors">✂</div>
+      <h2>Your Beauty,<br>Our Passion.</h2>
+      <p>Professional care • Beautiful results</p>
+      <a href="services.html">Explore our services →</a>
+    </div>
+  </section>
+
+  <section class="services-preview">
+    <div class="section-heading">
+      <p class="eyebrow">WHAT WE OFFER</p>
+      <h2>Our Beauty Services</h2>
+      <p>Everything you need for your next beautiful look.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-icon">💇🏾‍♀️</div>
+        <h3>Hair Dressing</h3>
+        <p>Stylish and professional hair services for your perfect look.</p>
+        <a href="services.html">View services →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">💄</div>
+        <h3>Makeup</h3>
+        <p>Beautiful looks for everyday wear, events and special occasions.</p>
+        <a href="services.html">View services →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">💅🏾</div>
+        <h3>Manicure</h3>
+        <p>Professional nail care with clean, beautiful finishes.</p>
+        <a href="services.html">View services →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🦶🏾</div>
+        <h3>Pedicure</h3>
+        <p>Relaxing foot care to keep you polished from head to toe.</p>
+        <a href="services.html">View services →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <p class="eyebrow">READY FOR YOUR NEXT LOOK?</p>
+      <h2>Let’s make you feel beautiful.</h2>
+      <p>Book your appointment today or chat with us on WhatsApp.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light" href="booking.html">Book Now</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/260971146826" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>
+    <strong>✂️ Bun Bun Hair Salon</strong>
+    <p>Beauty. Style. Confidence.</p>
   </div>
-</section>
-
-<section class="section">
-  <p class="eyebrow">WHAT WE OFFER</p>
-  <h2>Our Beauty Services</h2>
-  <div class="cards">
-    <article><div class="icon">💇🏽‍♀️</div><h3>Hair Dressing</h3><p>Stylish and professional hair services for your perfect look.</p></article>
-    <article><div class="icon">💄</div><h3>Makeup</h3><p>Beautiful looks for everyday wear, events and special occasions.</p></article>
-    <article><div class="icon">💅🏽</div><h3>Manicure</h3><p>Professional nail care and beautiful finishes.</p></article>
-    <article><div class="icon">🦶🏽</div><h3>Pedicure</h3><p>Relaxing foot care and polished, beautiful results.</p></article>
+  <div>
+    <p>📞 +260 971 146 826</p>
+    <p>📍 Lundazi • Kanyama Site • Lusaka</p>
   </div>
-</section>
-
-<section class="cta">
-  <h2>Ready for your next look?</h2>
-  <p>Book your appointment today.</p>
-  <a class="btn" href="booking.html">Book Now</a>
-</section>
-
-<footer>
-  <h3>Bun Bun Hair Salon</h3>
-  <p>Lundazi • Kanyama • Lusaka</p>
-  <p>📞 +260 971 146 826</p>
-  <p>Open 24/7 by appointment</p>
-  <small>© 2026 Bun Bun Hair Salon. All rights reserved.</small>
 </footer>
-<script src="script.js"></script>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("show");
+    menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.textContent = open ? "✕" : "☰";
+  });
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      menuToggle.textContent = "☰";
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
 </body>
 </html>
