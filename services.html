@@ -1,9 +1,117 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Services | Bun-Bun Hair Salon</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></a><nav class="nav" id="nav"><a href="index.html">Home</a><a class="active" href="services.html">Services</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="booking.html">Book Now <span>↗</span></a><button class="menu-btn" id="menuBtn">☰</button></header>
-<main><section class="page-hero"><span class="section-label">WHAT WE OFFER</span><h1>Our Beauty<br><em>Services.</em></h1><p>Professional beauty and personal-care services designed to help you look your best and feel confident.</p></section>
-<section class="service-list"><article class="big-service"><div class="service-number">01</div><div class="service-symbol">✦</div><div><h2>Hair Dressing</h2><p>Professional hair styling and dressing for everyday looks, special occasions and your personal style.</p><strong>K100–K300</strong></div><a class="primary-btn" href="booking.html?service=Hair%20Dressing">Book Service <span>→</span></a></article>
-<article class="big-service"><div class="service-number">02</div><div class="service-symbol">✧</div><div><h2>Makeup</h2><p>Beautiful makeup for events, celebrations, photoshoots and special occasions.</p><strong>K80–K150</strong></div><a class="primary-btn" href="booking.html?service=Makeup">Book Service <span>→</span></a></article>
-<article class="big-service"><div class="service-number">03</div><div class="service-symbol">✦</div><div><h2>Manicure</h2><p>Neat and stylish nail care to keep your hands looking polished and beautiful.</p><strong>K100</strong></div><a class="primary-btn" href="booking.html?service=Manicure">Book Service <span>→</span></a></article>
-<article class="big-service"><div class="service-number">04</div><div class="service-symbol">✧</div><div><h2>Pedicure</h2><p>Relaxing foot and toenail care for a clean, fresh and well-groomed finish.</p><strong>K100</strong></div><a class="primary-btn" href="booking.html?service=Pedicure">Book Service <span>→</span></a></article></section>
-<section class="cta"><span class="section-label">MAKE IT YOURS</span><h2>Choose your service.<br><em>Then book with us.</em></h2><a class="primary-btn" href="booking.html">Book an Appointment <span>→</span></a></section></main>
-<a class="floating-whatsapp" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20make%20an%20appointment." aria-label="Chat with Bun-Bun on WhatsApp">☏ <span>WhatsApp</span></a><footer><div class="brand footer-brand"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></div><p>© 2026 Bun-Bun Hair Salon.</p></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bun-Bun Hair Salon services — hair dressing, makeup, manicure and pedicure in Lundazi and Lusaka.">
+<title>Services | Bun-Bun Hair Salon</title>
+<style>
+:root{--ink:#171318;--pink:#8f285f;--accent:#ae2f70;--soft:#fff6fb;--line:#efd9e6;--muted:#625b60}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);padding:17px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{color:var(--pink);font-size:22px;font-weight:900;letter-spacing:.5px}
+nav{display:flex;gap:24px;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-weight:700}
+nav a:hover,nav a.active{color:var(--pink)}
+.book-top{background:var(--accent);color:#fff!important;padding:10px 17px;border-radius:25px}
+.hero{padding:78px 6% 68px;text-align:center;background:linear-gradient(135deg,#fde7f1,#fff8fc)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:800;font-size:13px}
+h1{font-size:clamp(42px,8vw,68px);line-height:1.05;margin:12px 0 16px}
+.hero h1 em{color:var(--pink);font-family:Georgia,serif;font-weight:500}
+.hero p{max-width:680px;margin:auto;color:var(--muted);font-size:18px}
+.services{padding:62px 6%;max-width:1180px;margin:auto}
+.section-head{text-align:center;margin-bottom:34px}
+.section-head span{font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:800}
+.section-head h2{font-size:36px;margin:8px 0}
+.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{position:relative;background:#fff;padding:30px;border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 35px rgba(120,35,80,.08);overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:var(--accent)}
+.icon{font-size:42px}
+.number{position:absolute;right:24px;top:22px;color:#d9a9c2;font-size:14px;font-weight:800}
+.card h2{margin:10px 0 8px;color:var(--pink);font-size:25px}
+.card p{color:var(--muted);min-height:72px}
+.price{display:inline-block;margin-top:12px;font-size:18px;color:var(--ink);font-weight:900}
+.btn{display:inline-block;margin-top:18px;padding:12px 20px;border-radius:30px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
+.btn:hover{transform:translateY(-1px)}
+.cta{margin:10px 6% 60px;padding:55px 25px;text-align:center;border-radius:28px;background:var(--pink);color:#fff}
+.cta h2{font-size:34px;margin-bottom:8px}
+.cta p{opacity:.9}
+.cta .btn{background:#fff;color:var(--pink)}
+footer{text-align:center;padding:25px;background:#171318;color:#fff}
+@media(max-width:700px){
+ header{padding:14px 5%}.logo{font-size:18px}nav{gap:10px}nav a:not(.book-top){display:none}.book-top{padding:9px 13px}
+ .hero{padding:58px 6%}.hero p{font-size:16px}.services{padding:48px 5%}.grid{grid-template-columns:1fr}.card p{min-height:auto}.cta{margin:0 5% 45px}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">BUN-BUN HAIR SALON</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a class="book-top" href="booking.html">Book Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">What We Offer</div>
+  <h1>Beauty that fits<br><em>your style.</em></h1>
+  <p>Professional beauty and personal-care services designed to help you look your best, feel confident and leave feeling refreshed.</p>
+</section>
+
+<section class="services">
+  <div class="section-head">
+    <span>OUR SERVICES</span>
+    <h2>Choose your next look</h2>
+    <p>Tap “Book Service” to start your appointment request on WhatsApp.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <span class="number">01</span><div class="icon">💇🏽‍♀️</div>
+      <h2>Hair Dressing</h2>
+      <p>Professional hair styling and dressing for everyday looks, special occasions and your personal style.</p>
+      <strong class="price">K80–K300</strong><br>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20Hair%20Dressing.">Book Service →</a>
+    </article>
+
+    <article class="card">
+      <span class="number">02</span><div class="icon">💄</div>
+      <h2>Makeup</h2>
+      <p>Beautiful makeup for events, celebrations, photoshoots and special occasions.</p>
+      <strong class="price">K50–K200</strong><br>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20Makeup.">Book Service →</a>
+    </article>
+
+    <article class="card">
+      <span class="number">03</span><div class="icon">💅🏽</div>
+      <h2>Manicure</h2>
+      <p>Neat and stylish nail care to keep your hands looking polished and beautiful.</p>
+      <strong class="price">K150</strong><br>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20a%20Manicure.">Book Service →</a>
+    </article>
+
+    <article class="card">
+      <span class="number">04</span><div class="icon">🦶🏽</div>
+      <h2>Pedicure</h2>
+      <p>Relaxing foot and toenail care for a clean, fresh and well-groomed finish.</p>
+      <strong class="price">K200</strong><br>
+      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20a%20Pedicure.">Book Service →</a>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready for your next look?</h2>
+  <p>Book directly through WhatsApp and let's get you ready.</p>
+  <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment.">WhatsApp Bun-Bun →</a>
+</section>
+
+<footer>© 2026 Bun-Bun Hair Salon · Lundazi & Lusaka</footer>
+</body>
+</html>

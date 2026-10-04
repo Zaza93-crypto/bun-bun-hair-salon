@@ -3,88 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book an Appointment | Bun Bun Hair Salon</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Book an appointment with Bun-Bun Hair Salon in Lundazi or Lusaka.">
+<title>Book an Appointment | Bun-Bun Hair Salon</title>
+<style>
+:root{--ink:#171318;--pink:#8f285f;--accent:#ae2f70;--soft:#fff6fb;--line:#efd9e6;--muted:#625b60}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--soft);line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);padding:16px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{color:var(--pink);font-weight:900;font-size:22px;letter-spacing:.5px;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-weight:700}
+nav a:hover,nav a.active{color:var(--pink)}
+.book-top{background:var(--accent);color:#fff!important;padding:9px 16px;border-radius:24px}
+.hero{text-align:center;padding:62px 6% 45px;background:linear-gradient(135deg,#fde7f1,#fff8fc)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:800;font-size:13px}
+h1{font-size:clamp(40px,8vw,62px);line-height:1.05;margin:10px 0 14px}
+.hero h1 em{color:var(--pink);font-family:Georgia,serif;font-weight:500}
+.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px}
+.booking-section{padding:38px 5% 70px}
+.booking-container{max-width:760px;margin:auto;background:#fff;padding:35px;border-radius:28px;border:1px solid var(--line);box-shadow:0 14px 40px rgba(120,35,80,.09)}
+.booking-container h2{color:var(--pink);margin-bottom:6px}
+.form-intro{color:var(--muted);margin-bottom:25px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column}
+.field.full{grid-column:1/-1}
+label{font-weight:800;margin-bottom:7px}
+input,select,textarea{width:100%;font:inherit;border:1px solid #dfc8d4;border-radius:14px;padding:13px 14px;background:#fff;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(174,47,112,.1)}
+textarea{resize:vertical;min-height:105px}
+.hint{font-size:12px;color:#777;margin-top:5px}
+.booking-button{width:100%;border:0;margin-top:24px;padding:15px 20px;border-radius:30px;background:var(--accent);color:#fff;font:inherit;font-weight:900;font-size:16px;cursor:pointer}
+.booking-button:hover{background:var(--pink)}
+.notice{margin-top:18px;padding:14px 16px;border-radius:14px;background:#fff4f9;color:#5f4653;font-size:14px}
+footer{text-align:center;padding:25px;background:#171318;color:#fff}
+@media(max-width:700px){
+ header{padding:14px 5%}.logo{font-size:18px}nav{gap:10px}nav a:not(.book-top){display:none}
+ .hero{padding:52px 6% 40px}.hero p{font-size:16px}
+ .booking-section{padding:25px 5% 50px}.booking-container{padding:25px 18px;border-radius:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+}
+</style>
 </head>
 <body>
-<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></a><nav class="nav" id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a class="active" href="booking.html">Booking</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="booking.html">Book Now <span>↗</span></a><button class="menu-btn" id="menuBtn">☰</button></header>
+<header>
+  <a class="logo" href="index.html">BUN-BUN HAIR SALON</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a class="active" href="booking.html">Booking</a>
+    <a href="about.html">About Us</a>
+    <a class="book-top" href="booking.html">Book Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">BUN-BUN APPOINTMENTS</div>
+  <h1>Book your <em>next look.</em></h1>
+  <p>Tell us what you need, choose your preferred time and send your appointment request directly to Bun-Bun on WhatsApp.</p>
+</section>
 
 <section class="booking-section">
   <div class="booking-container">
-    <h1>Book Your Appointment</h1>
-    <p>Choose your service, preferred date and time. Your booking will be sent to us through WhatsApp for confirmation.</p>
+    <h2>Appointment Details</h2>
+    <p class="form-intro">Please complete the form below. Your request will open in WhatsApp so our team can confirm your appointment.</p>
 
     <form id="bookingForm">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" placeholder="Enter your full name" required>
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" placeholder="Your full name" autocomplete="name" required>
+        </div>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="e.g. 0971234567" required>
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" placeholder="e.g. 0971234567" autocomplete="tel" required>
+        </div>
 
-      <label for="service">Select Service</label>
-      <select id="service" required>
-        <option value="">-- Select a service --</option>
-        <option>Hair Dressing — K100–K300</option>
-        <option>Manicure — K100</option>
-        <option>Pedicure — K100</option>
-        <option>Makeup — K80–K150</option>
-      </select>
+        <div class="field full">
+          <label for="service">Select Service *</label>
+          <select id="service" required>
+            <option value="">Choose a service</option>
+            <option>Hair Dressing — K80–K300</option>
+            <option>Makeup — K50–K200</option>
+            <option>Manicure — K150</option>
+            <option>Pedicure — K200</option>
+          </select>
+        </div>
 
-      <label for="location">Service Location</label>
-      <select id="location" required>
-        <option value="">-- Select location --</option>
-        <option>Upstairs Area, Lundazi</option>
-        <option>Kanyama Site, Lusaka</option>
-        <option>Other Lusaka Location</option>
-      </select>
+        <div class="field full">
+          <label for="location">Service Location *</label>
+          <select id="location" required>
+            <option value="">Choose a location</option>
+            <option>Upstairs Area, Lundazi</option>
+            <option>Kanyama Site, Lusaka</option>
+            <option>Other Lusaka Location</option>
+          </select>
+        </div>
 
-      <label for="date">Preferred Date</label>
-      <input type="date" id="date" required>
+        <div class="field">
+          <label for="date">Preferred Date *</label>
+          <input type="date" id="date" required>
+        </div>
 
-      <label for="time">Preferred Time</label>
-      <input type="time" id="time" required>
+        <div class="field">
+          <label for="time">Preferred Time *</label>
+          <input type="time" id="time" required>
+        </div>
 
-      <label for="message">Additional Request</label>
-      <textarea id="message" rows="4" placeholder="Any special request?"></textarea>
+        <div class="field full">
+          <label for="message">Additional Request</label>
+          <textarea id="message" placeholder="Tell us anything we should know about your appointment..."></textarea>
+          <span class="hint">Optional</span>
+        </div>
+      </div>
 
-      <button type="submit" class="booking-button">📲 Book via WhatsApp</button>
+      <button type="submit" class="booking-button">📲 Send Booking Request on WhatsApp</button>
+      <div class="notice">Your appointment is a request until Bun-Bun confirms the date and time with you on WhatsApp.</div>
     </form>
   </div>
 </section>
 
-<a class="floating-whatsapp" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20make%20an%20appointment." aria-label="Chat with Bun-Bun on WhatsApp">☏ <span>WhatsApp</span></a>
-<footer>
-  <p>© 2026 Bun Bun Hair Salon. All Rights Reserved.</p>
-</footer>
+<footer>© 2026 Bun-Bun Hair Salon · Lundazi & Lusaka</footer>
 
 <script>
+const dateInput = document.getElementById("date");
+const today = new Date();
+const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+dateInput.min = localToday;
+
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
   const service = document.getElementById("service").value;
   const location = document.getElementById("location").value;
   const date = document.getElementById("date").value;
   const time = document.getElementById("time").value;
-  const message = document.getElementById("message").value;
+  const message = document.getElementById("message").value.trim();
 
   const whatsappNumber = "260971146826";
-
   const text =
-    "Hello Bun Bun Hair Salon!\n\n" +
-    "NEW APPOINTMENT BOOKING\n\n" +
+    "Hello Bun-Bun Hair Salon!\n\n" +
+    "NEW APPOINTMENT REQUEST\n\n" +
     "Name: " + name + "\n" +
     "Phone: " + phone + "\n" +
     "Service: " + service + "\n" +
     "Location: " + location + "\n" +
-    "Date: " + date + "\n" +
-    "Time: " + time + "\n" +
-    "Additional Request: " + (message || "None");
+    "Preferred Date: " + date + "\n" +
+    "Preferred Time: " + time + "\n" +
+    "Additional Request: " + (message || "None") + "\n\n" +
+    "Please confirm my appointment.";
 
   window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text), "_blank");
 });
 </script>
-<script src="script.js"></script>
 </body>
 </html>
