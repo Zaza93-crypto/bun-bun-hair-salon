@@ -1,112 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Contact Bun-Bun Hair Salon in Lundazi and Lusaka. Call, WhatsApp or book your appointment.">
-<title>Contact | Bun-Bun Hair Salon</title>
-<style>
-:root{--ink:#171318;--pink:#8f285f;--accent:#ae2f70;--soft:#fff6fb;--line:#efd9e6;--muted:#625b60}
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Contact | Bun-Bun Hair Salon</title><style>
+
+:root{--ink:#292a4b;--muted:#77788a;--purple:#7d2f78;--purple2:#a64b91;--cream:#fffafd;--soft:#f8eef6;--line:#ead9e7;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);padding:16px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.logo{color:var(--pink);font-weight:900;font-size:22px;letter-spacing:.5px;text-decoration:none}
-nav{display:flex;gap:22px;align-items:center}
-nav a{color:var(--ink);text-decoration:none;font-weight:700}
-nav a:hover,nav a.active{color:var(--pink)}
-.book-top{background:var(--accent);color:#fff!important;padding:9px 16px;border-radius:24px}
-.hero{text-align:center;padding:68px 6% 55px;background:linear-gradient(135deg,#fde7f1,#fff8fc)}
-.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:800;font-size:13px}
-h1{font-size:clamp(40px,8vw,64px);line-height:1.05;margin:10px 0 15px}
-.hero h1 em{color:var(--pink);font-family:Georgia,serif;font-weight:500}
-.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px}
-.contact-section{padding:55px 5% 75px;max-width:1100px;margin:auto}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.site-header{display:flex;align-items:center;gap:28px;padding:18px 6%;background:#fff;border-bottom:1px solid #eeeaf0;position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:38px;height:38px;border-radius:9px;background:#29304b;color:#fff;display:grid;place-items:center;font-family:Georgia,serif;font-size:22px}
+.brand strong{display:block;font-size:15px;letter-spacing:2px}.brand small{display:block;font-size:8px;letter-spacing:3px;color:#777;margin-top:-2px}
+.nav{display:flex;align-items:center;gap:28px}.nav a{font-size:14px;color:#34334b;font-weight:600}.nav a:hover,.nav a.active{color:#20294a}.nav a.active{border-bottom:2px solid #29304b;padding-bottom:7px}
+.nav-cta{background:#252d49;color:#fff;padding:13px 22px;border-radius:25px;font-size:13px;font-weight:800}
+.menu-btn{display:none;border:0;background:none;font-size:25px;color:#252d49}
+.hero{min-height:390px;padding:86px 6% 72px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 84% 42%,rgba(222,221,235,.85),transparent 26%),linear-gradient(110deg,#fff 0%,#fff 54%,#faf9fc 100%);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:7%;top:52px;width:310px;height:310px;border-radius:48% 52% 45% 55%;background:linear-gradient(145deg,rgba(224,224,238,.72),rgba(246,243,248,.3));z-index:0}
+.hero>*{position:relative;z-index:1}
+.eyebrow{font-size:11px;letter-spacing:4px;color:#777;display:flex;align-items:center;gap:12px;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:1px;background:#888}
+.hero h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-3px;max-width:760px;margin:18px 0 18px}.hero h1 em{font-family:Georgia,serif;font-weight:400;color:#3e425d}
+.hero p{max-width:600px;color:var(--muted);font-size:16px}
+.section{padding:58px 6% 82px}.container{max-width:1080px;margin:auto}
+.card{background:#fff;border:1px solid #ece6ed;border-radius:24px;box-shadow:0 15px 45px rgba(40,35,55,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:#29304b;color:#fff;border-radius:25px;padding:12px 20px;font-size:13px;font-weight:800}
+footer{padding:28px 6%;background:#25283f;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px}
+.footer-brand .brand-mark{background:#fff;color:#29304b}.footer-brand strong{color:#fff}.footer-brand small{color:#ccc}
+@media(max-width:800px){.site-header{padding:14px 5%}.nav{display:none}.menu-btn{display:block}.nav-cta{padding:10px 15px}.hero{min-height:330px;padding:65px 5% 55px}.hero:after{right:-90px;opacity:.55}.section{padding:42px 5% 60px}}
+@media(max-width:600px){.brand strong{font-size:13px}.brand small{font-size:7px}.nav-cta{display:none}.hero h1{font-size:50px}.hero p{font-size:15px}footer{flex-direction:column;text-align:center}}
+
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 12px 35px rgba(120,35,80,.08)}
-.icon{font-size:38px;margin-bottom:10px}
-.card h2{font-size:22px;color:var(--pink);margin-bottom:8px}
-.card p{color:var(--muted)}
-.phone{font-size:19px;font-weight:900;color:var(--ink)!important;margin:8px 0 15px}
-.btn{display:inline-block;margin-top:16px;padding:12px 19px;border-radius:30px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800}
-.btn.secondary{background:#fff;color:var(--pink);border:1px solid var(--pink)}
-.locations{margin-top:25px;background:var(--soft);border-radius:28px;padding:35px}
-.locations h2{color:var(--pink);margin-bottom:18px}
-.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.location{background:#fff;border:1px solid var(--line);padding:20px;border-radius:18px}
-.location strong{display:block;margin-bottom:5px;color:var(--ink)}
-.location span{color:var(--muted)}
-.cta{margin-top:28px;text-align:center;padding:45px 25px;border-radius:26px;background:var(--pink);color:#fff}
-.cta h2{font-size:32px;margin-bottom:8px}
-.cta p{opacity:.9}
-.cta .btn{background:#fff;color:var(--pink)}
-footer{text-align:center;padding:25px;background:#171318;color:#fff}
-@media(max-width:750px){
- header{padding:14px 5%}.logo{font-size:18px}nav{gap:10px}nav a:not(.book-top){display:none}
- .hero{padding:55px 6% 45px}.hero p{font-size:16px}
- .contact-section{padding:40px 5% 55px}.contact-grid{grid-template-columns:1fr}.location-grid{grid-template-columns:1fr}
-}
-</style>
-</head>
-<body>
-<header>
-  <a class="logo" href="index.html">BUN-BUN HAIR SALON</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Booking</a>
-    <a href="about.html">About Us</a>
-    <a class="active" href="contact.html">Contact</a>
-    <a class="book-top" href="booking.html">Book Now</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="eyebrow">GET IN TOUCH</div>
-  <h1>Let's talk <em>beauty.</em></h1>
-  <p>Have a question, need directions or ready to book? Reach Bun-Bun Hair Salon directly by phone or WhatsApp.</p>
-</section>
-
-<section class="contact-section">
-  <div class="contact-grid">
-    <article class="card">
-      <div class="icon">📞</div>
-      <h2>Call Us</h2>
-      <p>Speak directly with Bun-Bun Hair Salon.</p>
-      <p class="phone">+260 971 146 826</p>
-      <a class="btn" href="tel:+260971146826">Call Now →</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">💬</div>
-      <h2>WhatsApp</h2>
-      <p>Message us about services, availability or your appointment.</p>
-      <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20make%20an%20enquiry.">Chat on WhatsApp →</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">📅</div>
-      <h2>Book an Appointment</h2>
-      <p>Choose your service, location, date and preferred time.</p>
-      <a class="btn" href="booking.html">Book Now →</a>
-    </article>
-  </div>
-
-  <section class="locations">
-    <h2>Our Locations</h2>
-    <div class="location-grid">
-      <div class="location"><strong>📍 Upstairs Area, Lundazi</strong><span>Visit Bun-Bun in Lundazi.</span></div>
-      <div class="location"><strong>📍 Kanyama Site, Lusaka</strong><span>Visit Bun-Bun in Kanyama, Lusaka.</span></div>
-    </div>
-    <div class="location" style="margin-top:18px"><strong>📍 Lusaka Services by Arrangement</strong><span>Other Lusaka service arrangements can be discussed with us directly.</span></div>
-  </section>
-
-  <section class="cta">
-    <h2>Ready for your next look?</h2>
-    <p>Send us a WhatsApp message and let's get your appointment started.</p>
-    <a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment.">WhatsApp Bun-Bun →</a>
-  </section>
-</section>
-
-<footer>© 2026 Bun-Bun Hair Salon · Lundazi & Lusaka</footer>
-</body>
-</html>
+.contact-card{padding:30px;min-height:235px;display:flex;flex-direction:column;align-items:flex-start}
+.icon{width:48px;height:48px;border-radius:14px;background:#f4e8f2;display:grid;place-items:center;font-size:21px;margin-bottom:18px}
+.contact-card h2{font-size:23px;margin-bottom:8px}.contact-card p{color:var(--muted);font-size:14px;margin-bottom:12px}.phone{font-size:18px!important;font-weight:800;color:var(--ink)!important}
+.contact-card .btn{margin-top:auto}
+.locations{margin-top:28px;padding:32px;border-radius:24px;background:#f8f0f7}
+.locations h2{font-size:27px;margin-bottom:18px}.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.location{background:#fff;border-radius:17px;padding:20px;border:1px solid #eadfea}.location strong{display:block;margin-bottom:4px}.location span{font-size:13px;color:var(--muted)}
+.contact-cta{margin-top:28px;padding:40px;border-radius:24px;background:#29304b;color:#fff;text-align:center}.contact-cta h2{font-size:32px;margin-bottom:7px}.contact-cta p{color:#dddce5;margin-bottom:18px}.contact-cta .btn{background:#fff;color:#29304b}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}.location-grid{grid-template-columns:1fr}.contact-card{min-height:0}}
+</style></head><body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></a><nav class="nav" id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="booking.html">Booking</a><a href="about.html">About Us</a><a class="active" href="contact.html">Contact</a></nav><a class="nav-cta" href="booking.html">Book Now →</a><button class="menu-btn" id="menuBtn">☰</button></header>
+<section class="hero"><div class="eyebrow">GET IN TOUCH</div><h1>Let's talk <em>beauty.</em></h1><p>Have a question, need directions or ready to book? Reach Bun-Bun Hair Salon directly by phone or WhatsApp.</p></section>
+<section class="section"><div class="container">
+<div class="contact-grid">
+<div class="card contact-card"><div class="icon">☎</div><h2>Call Us</h2><p>Speak directly with Bun-Bun Hair Salon.</p><p class="phone">+260 971 146 826</p><a class="btn" href="tel:+260971146826">Call Now →</a></div>
+<div class="card contact-card"><div class="icon">💬</div><h2>WhatsApp</h2><p>Message us about services, availability or your appointment.</p><a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20make%20an%20enquiry.">Chat on WhatsApp →</a></div>
+<div class="card contact-card"><div class="icon">✦</div><h2>Book an Appointment</h2><p>Choose your service, location, date and preferred time.</p><a class="btn" href="booking.html">Book Now →</a></div>
+</div>
+<div class="locations"><h2>Our Locations</h2><div class="location-grid"><div class="location"><strong>📍 Upstairs Area, Lundazi</strong><span>Visit Bun-Bun in Lundazi.</span></div><div class="location"><strong>📍 Kanyama Site, Lusaka</strong><span>Visit Bun-Bun in Kanyama, Lusaka.</span></div></div><div class="location" style="margin-top:18px"><strong>📍 Lusaka Services by Arrangement</strong><span>Other Lusaka service arrangements can be discussed directly with us.</span></div></div>
+<div class="contact-cta"><h2>Ready for your next look?</h2><p>Send us a WhatsApp message and let's get your appointment started.</p><a class="btn" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment.">WhatsApp Bun-Bun →</a></div>
+</div></section>
+<footer><div class="brand footer-brand"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></div><span>© 2026 Bun-Bun Hair Salon. Beauty. Style. Confidence.</span></footer>
+<script>
+const nav=document.getElementById("nav"),mb=document.getElementById("menuBtn");mb.onclick=()=>{nav.style.display=nav.style.display==="flex"?"":"flex";nav.style.flexDirection="column";nav.style.position="absolute";nav.style.top="70px";nav.style.right="5%";nav.style.background="#fff";nav.style.padding="18px";nav.style.borderRadius="15px";nav.style.boxShadow="0 10px 30px rgba(0,0,0,.1)"};
+</script></body></html>

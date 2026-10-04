@@ -1,161 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Book an appointment with Bun-Bun Hair Salon in Lundazi or Lusaka.">
-<title>Book an Appointment | Bun-Bun Hair Salon</title>
-<style>
-:root{--ink:#171318;--pink:#8f285f;--accent:#ae2f70;--soft:#fff6fb;--line:#efd9e6;--muted:#625b60}
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Booking | Bun-Bun Hair Salon</title><style>
+
+:root{--ink:#292a4b;--muted:#77788a;--purple:#7d2f78;--purple2:#a64b91;--cream:#fffafd;--soft:#f8eef6;--line:#ead9e7;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--soft);line-height:1.6}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);padding:16px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.logo{color:var(--pink);font-weight:900;font-size:22px;letter-spacing:.5px;text-decoration:none}
-nav{display:flex;gap:22px;align-items:center}
-nav a{color:var(--ink);text-decoration:none;font-weight:700}
-nav a:hover,nav a.active{color:var(--pink)}
-.book-top{background:var(--accent);color:#fff!important;padding:9px 16px;border-radius:24px}
-.hero{text-align:center;padding:62px 6% 45px;background:linear-gradient(135deg,#fde7f1,#fff8fc)}
-.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:800;font-size:13px}
-h1{font-size:clamp(40px,8vw,62px);line-height:1.05;margin:10px 0 14px}
-.hero h1 em{color:var(--pink);font-family:Georgia,serif;font-weight:500}
-.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px}
-.booking-section{padding:38px 5% 70px}
-.booking-container{max-width:760px;margin:auto;background:#fff;padding:35px;border-radius:28px;border:1px solid var(--line);box-shadow:0 14px 40px rgba(120,35,80,.09)}
-.booking-container h2{color:var(--pink);margin-bottom:6px}
-.form-intro{color:var(--muted);margin-bottom:25px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.field{display:flex;flex-direction:column}
-.field.full{grid-column:1/-1}
-label{font-weight:800;margin-bottom:7px}
-input,select,textarea{width:100%;font:inherit;border:1px solid #dfc8d4;border-radius:14px;padding:13px 14px;background:#fff;color:var(--ink);outline:none}
-input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(174,47,112,.1)}
-textarea{resize:vertical;min-height:105px}
-.hint{font-size:12px;color:#777;margin-top:5px}
-.booking-button{width:100%;border:0;margin-top:24px;padding:15px 20px;border-radius:30px;background:var(--accent);color:#fff;font:inherit;font-weight:900;font-size:16px;cursor:pointer}
-.booking-button:hover{background:var(--pink)}
-.notice{margin-top:18px;padding:14px 16px;border-radius:14px;background:#fff4f9;color:#5f4653;font-size:14px}
-footer{text-align:center;padding:25px;background:#171318;color:#fff}
-@media(max-width:700px){
- header{padding:14px 5%}.logo{font-size:18px}nav{gap:10px}nav a:not(.book-top){display:none}
- .hero{padding:52px 6% 40px}.hero p{font-size:16px}
- .booking-section{padding:25px 5% 50px}.booking-container{padding:25px 18px;border-radius:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
-}
-</style>
-</head>
-<body>
-<header>
-  <a class="logo" href="index.html">BUN-BUN HAIR SALON</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a class="active" href="booking.html">Booking</a>
-    <a href="about.html">About Us</a>
-    <a class="book-top" href="booking.html">Book Now</a>
-  </nav>
-</header>
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.site-header{display:flex;align-items:center;gap:28px;padding:18px 6%;background:#fff;border-bottom:1px solid #eeeaf0;position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:38px;height:38px;border-radius:9px;background:#29304b;color:#fff;display:grid;place-items:center;font-family:Georgia,serif;font-size:22px}
+.brand strong{display:block;font-size:15px;letter-spacing:2px}.brand small{display:block;font-size:8px;letter-spacing:3px;color:#777;margin-top:-2px}
+.nav{display:flex;align-items:center;gap:28px}.nav a{font-size:14px;color:#34334b;font-weight:600}.nav a:hover,.nav a.active{color:#20294a}.nav a.active{border-bottom:2px solid #29304b;padding-bottom:7px}
+.nav-cta{background:#252d49;color:#fff;padding:13px 22px;border-radius:25px;font-size:13px;font-weight:800}
+.menu-btn{display:none;border:0;background:none;font-size:25px;color:#252d49}
+.hero{min-height:390px;padding:86px 6% 72px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 84% 42%,rgba(222,221,235,.85),transparent 26%),linear-gradient(110deg,#fff 0%,#fff 54%,#faf9fc 100%);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:7%;top:52px;width:310px;height:310px;border-radius:48% 52% 45% 55%;background:linear-gradient(145deg,rgba(224,224,238,.72),rgba(246,243,248,.3));z-index:0}
+.hero>*{position:relative;z-index:1}
+.eyebrow{font-size:11px;letter-spacing:4px;color:#777;display:flex;align-items:center;gap:12px;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:1px;background:#888}
+.hero h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-3px;max-width:760px;margin:18px 0 18px}.hero h1 em{font-family:Georgia,serif;font-weight:400;color:#3e425d}
+.hero p{max-width:600px;color:var(--muted);font-size:16px}
+.section{padding:58px 6% 82px}.container{max-width:1080px;margin:auto}
+.card{background:#fff;border:1px solid #ece6ed;border-radius:24px;box-shadow:0 15px 45px rgba(40,35,55,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:#29304b;color:#fff;border-radius:25px;padding:12px 20px;font-size:13px;font-weight:800}
+footer{padding:28px 6%;background:#25283f;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px}
+.footer-brand .brand-mark{background:#fff;color:#29304b}.footer-brand strong{color:#fff}.footer-brand small{color:#ccc}
+@media(max-width:800px){.site-header{padding:14px 5%}.nav{display:none}.menu-btn{display:block}.nav-cta{padding:10px 15px}.hero{min-height:330px;padding:65px 5% 55px}.hero:after{right:-90px;opacity:.55}.section{padding:42px 5% 60px}}
+@media(max-width:600px){.brand strong{font-size:13px}.brand small{font-size:7px}.nav-cta{display:none}.hero h1{font-size:50px}.hero p{font-size:15px}footer{flex-direction:column;text-align:center}}
 
-<section class="hero">
-  <div class="eyebrow">BUN-BUN APPOINTMENTS</div>
-  <h1>Book your <em>next look.</em></h1>
-  <p>Tell us what you need, choose your preferred time and send your appointment request directly to Bun-Bun on WhatsApp.</p>
-</section>
-
-<section class="booking-section">
-  <div class="booking-container">
-    <h2>Appointment Details</h2>
-    <p class="form-intro">Please complete the form below. Your request will open in WhatsApp so our team can confirm your appointment.</p>
-
-    <form id="bookingForm">
-      <div class="form-grid">
-        <div class="field">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" placeholder="Your full name" autocomplete="name" required>
-        </div>
-
-        <div class="field">
-          <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" placeholder="e.g. 0971234567" autocomplete="tel" required>
-        </div>
-
-        <div class="field full">
-          <label for="service">Select Service *</label>
-          <select id="service" required>
-            <option value="">Choose a service</option>
-            <option>Hair Dressing — K80–K300</option>
-            <option>Makeup — K50–K200</option>
-            <option>Manicure — K150</option>
-            <option>Pedicure — K200</option>
-          </select>
-        </div>
-
-        <div class="field full">
-          <label for="location">Service Location *</label>
-          <select id="location" required>
-            <option value="">Choose a location</option>
-            <option>Upstairs Area, Lundazi</option>
-            <option>Kanyama Site, Lusaka</option>
-            <option>Other Lusaka Location</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="date">Preferred Date *</label>
-          <input type="date" id="date" required>
-        </div>
-
-        <div class="field">
-          <label for="time">Preferred Time *</label>
-          <input type="time" id="time" required>
-        </div>
-
-        <div class="field full">
-          <label for="message">Additional Request</label>
-          <textarea id="message" placeholder="Tell us anything we should know about your appointment..."></textarea>
-          <span class="hint">Optional</span>
-        </div>
-      </div>
-
-      <button type="submit" class="booking-button">📲 Send Booking Request on WhatsApp</button>
-      <div class="notice">Your appointment is a request until Bun-Bun confirms the date and time with you on WhatsApp.</div>
-    </form>
-  </div>
-</section>
-
-<footer>© 2026 Bun-Bun Hair Salon · Lundazi & Lusaka</footer>
-
+.booking-intro{margin-bottom:24px;color:var(--muted)}
+.booking-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:28px}
+.info-card{background:#29304b;color:#fff;padding:34px;border-radius:24px}
+.info-card .eyebrow{color:#d9d7e1}.info-card .eyebrow:before{background:#d9d7e1}
+.info-card h2{font-size:35px;line-height:1.1;margin:16px 0}.info-card h2 em{font-family:Georgia,serif;font-weight:400;color:#d9a5cb}
+.info-card p{color:#dddce5;margin-bottom:22px}
+.info-row{padding:15px 0;border-top:1px solid rgba(255,255,255,.15)}.info-row strong{display:block;font-size:12px;letter-spacing:1px}.info-row span{font-size:14px;color:#dddce5}
+.form-card{padding:34px}.form-card h2{font-size:28px;margin-bottom:5px}.form-card>p{color:var(--muted);font-size:14px;margin-bottom:24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column}.full{grid-column:1/-1}
+label{font-size:13px;font-weight:800;margin-bottom:7px}input,select,textarea{font:inherit;width:100%;padding:13px 14px;border:1px solid #ddd2df;border-radius:13px;outline:none;color:var(--ink);background:#fff}input:focus,select:focus,textarea:focus{border-color:#9b5590;box-shadow:0 0 0 3px rgba(155,85,144,.1)}textarea{resize:vertical;min-height:105px}
+.submit{width:100%;border:0;margin-top:20px;cursor:pointer;font:inherit;background:#29304b;color:#fff;border-radius:26px;padding:14px;font-weight:800}
+.notice{margin-top:12px;padding:12px 14px;border-radius:12px;background:#f8f0f7;color:#6e6170;font-size:12px}
+@media(max-width:800px){.booking-grid{grid-template-columns:1fr}.form-card,.info-card{padding:25px}}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}.full{grid-column:auto}}
+</style></head><body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></a><nav class="nav" id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a class="active" href="booking.html">Booking</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="booking.html">Book Now →</a><button class="menu-btn" id="menuBtn">☰</button></header>
+<section class="hero"><div class="eyebrow">BUN-BUN APPOINTMENTS</div><h1>Book your <em>next look.</em></h1><p>Choose your service, preferred location, date and time. Your appointment request will be sent directly to Bun-Bun on WhatsApp.</p></section>
+<section class="section"><div class="container"><div class="booking-grid">
+<aside class="info-card"><div class="eyebrow">READY WHEN YOU ARE</div><h2>Let's create your <em>look.</em></h2><p>Tell us what you need and we'll help you get your appointment arranged.</p><div class="info-row"><strong>CALL / WHATSAPP</strong><span>+260 971 146 826</span></div><div class="info-row"><strong>LUNDAZI</strong><span>Upstairs Area</span></div><div class="info-row"><strong>LUSAKA</strong><span>Kanyama Site • Other locations by arrangement</span></div></aside>
+<div class="card form-card"><h2>Appointment Details</h2><p>Complete the form below and continue to WhatsApp.</p><form id="bookingForm"><div class="form-grid">
+<div class="field"><label>Full Name *</label><input id="name" required placeholder="Your full name"></div>
+<div class="field"><label>Phone Number *</label><input id="phone" type="tel" required placeholder="e.g. 0971234567"></div>
+<div class="field full"><label>Select Service *</label><select id="service" required><option value="">Choose a service</option><option>Hair Dressing — K80–K300</option><option>Makeup — K50–K200</option><option>Manicure — K150</option><option>Pedicure — K200</option></select></div>
+<div class="field full"><label>Service Location *</label><select id="location" required><option value="">Choose a location</option><option>Upstairs Area, Lundazi</option><option>Kanyama Site, Lusaka</option><option>Other Lusaka Location</option></select></div>
+<div class="field"><label>Preferred Date *</label><input id="date" type="date" required></div>
+<div class="field"><label>Preferred Time *</label><input id="time" type="time" required></div>
+<div class="field full"><label>Additional Request</label><textarea id="message" placeholder="Any special request?"></textarea></div>
+</div><button class="submit" type="submit">📲 Continue on WhatsApp</button><div class="notice">Your appointment is a request until Bun-Bun confirms the date and time with you.</div></form></div>
+</div></div></section>
+<footer><div class="brand footer-brand"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></div><span>© 2026 Bun-Bun Hair Salon. Beauty. Style. Confidence.</span></footer>
 <script>
-const dateInput = document.getElementById("date");
-const today = new Date();
-const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
-dateInput.min = localToday;
-
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
-  const location = document.getElementById("location").value;
-  const date = document.getElementById("date").value;
-  const time = document.getElementById("time").value;
-  const message = document.getElementById("message").value.trim();
-
-  const whatsappNumber = "260971146826";
-  const text =
-    "Hello Bun-Bun Hair Salon!\n\n" +
-    "NEW APPOINTMENT REQUEST\n\n" +
-    "Name: " + name + "\n" +
-    "Phone: " + phone + "\n" +
-    "Service: " + service + "\n" +
-    "Location: " + location + "\n" +
-    "Preferred Date: " + date + "\n" +
-    "Preferred Time: " + time + "\n" +
-    "Additional Request: " + (message || "None") + "\n\n" +
-    "Please confirm my appointment.";
-
-  window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text), "_blank");
-});
-</script>
-</body>
-</html>
+const nav=document.getElementById("nav"),mb=document.getElementById("menuBtn");mb.onclick=()=>{nav.style.display=nav.style.display==="flex"?"":"flex";nav.style.flexDirection="column";nav.style.position="absolute";nav.style.top="70px";nav.style.right="5%";nav.style.background="#fff";nav.style.padding="18px";nav.style.borderRadius="15px";nav.style.boxShadow="0 10px 30px rgba(0,0,0,.1)"};
+const d=document.getElementById("date"),t=new Date();d.min=new Date(t-t.getTimezoneOffset()*60000).toISOString().split("T")[0];
+document.getElementById("bookingForm").onsubmit=e=>{e.preventDefault();let text="Hello Bun-Bun Hair Salon!%0A%0ANEW APPOINTMENT REQUEST%0A%0AName: "+encodeURIComponent(name.value)+"%0APhone: "+encodeURIComponent(phone.value)+"%0AService: "+encodeURIComponent(service.value)+"%0ALocation: "+encodeURIComponent(location.value)+"%0ADate: "+date.value+"%0ATime: "+time.value+"%0AAdditional Request: "+encodeURIComponent(message.value||"None");window.open("https://wa.me/260971146826?text="+text,"_blank")};
+</script></body></html>
