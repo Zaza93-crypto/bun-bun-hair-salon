@@ -7,15 +7,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <div class="logo">Bun Bun Hair Salon</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html" class="active">Booking</a>
-    <a href="about.html">About Us</a>
-  </nav>
-</header>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></a><nav class="nav" id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a class="active" href="booking.html">Booking</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="booking.html">Book Now <span>↗</span></a><button class="menu-btn" id="menuBtn">☰</button></header>
 
 <section class="booking-section">
   <div class="booking-container">
@@ -60,6 +52,7 @@
   </div>
 </section>
 
+<a class="floating-whatsapp" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20make%20an%20appointment." aria-label="Chat with Bun-Bun on WhatsApp">☏ <span>WhatsApp</span></a>
 <footer>
   <p>© 2026 Bun Bun Hair Salon. All Rights Reserved.</p>
 </footer>
@@ -92,5 +85,6 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
   window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text), "_blank");
 });
 </script>
+<script src="script.js"></script>
 </body>
 </html>

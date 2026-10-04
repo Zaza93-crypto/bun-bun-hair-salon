@@ -1,6 +1,8 @@
-BUN-BUN HAIR SALON — GITHUB PAGES PACKAGE
+BUN-BUN HAIR SALON - WEBSITE UPGRADE
 
-Canonical files:
+Upload these files to your GitHub Pages repository.
+
+Included:
 - index.html
 - services.html
 - about.html
@@ -9,7 +11,8 @@ Canonical files:
 - styles.css
 - script.js
 
-Upload these files to the root of the GitHub Pages repository.
-The site does not require a custom domain or Cloudflare.
+This version does NOT include customer testimonials.
+It includes a gallery-style lookbook, floating WhatsApp button, consistent navigation, responsive mobile layout, service prices and booking links.
 
-Booking uses WhatsApp number +260 971 146 826.
+GitHub Pages URL:
+https://zaza93-crypto.github.io/bun-bun-hair-salon/
