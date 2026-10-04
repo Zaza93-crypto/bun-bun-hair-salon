@@ -1,3 +1,118 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About Us | Bun-Bun Hair Salon</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></a><nav class="nav" id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a class="active" href="about.html">About Us</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="booking.html">Book Now <span>↗</span></a><button class="menu-btn" id="menuBtn">☰</button></header>
-<main><section class="page-hero compact"><span class="section-label">ABOUT BUN-BUN</span><h1>Beauty. Style.<br><em>Confidence.</em></h1><p>A new salon brand focused on making professional beauty services accessible, welcoming and easy to book.</p></section><section class="about-story"><div class="about-image large"><div class="mini-label">BUN-BUN</div><div class="abstract-face"></div></div><div><span class="section-label">OUR STORY</span><h2>We are just<br><em>getting started.</em></h2><p>Bun-Bun Hair Salon is a new business serving customers in Lundazi and Lusaka. Our goal is simple: provide quality beauty services in a comfortable environment and help every customer leave feeling confident.</p><p>As the business grows, this website will become our digital home for services, bookings and a gallery of our real work.</p><a class="primary-btn dark" href="booking.html">Book Your Visit <span>→</span></a></div></section><section class="values"><div><span>01</span><h3>Good Service</h3><p>We aim to make every appointment friendly and professional.</p></div><div><span>02</span><h3>Your Style</h3><p>Your preferred look comes first. We listen before we style.</p></div><div><span>03</span><h3>Growing Together</h3><p>We are building Bun-Bun one customer and one great look at a time.</p></div></section></main><a class="floating-whatsapp" href="https://wa.me/260971146826?text=Hello%20Bun-Bun%20Hair%20Salon%2C%20I%20would%20like%20to%20make%20an%20appointment." aria-label="Chat with Bun-Bun on WhatsApp">☏ <span>WhatsApp</span></a><footer><div class="brand footer-brand"><span class="brand-mark">B</span><span><strong>BUN-BUN</strong><small>HAIR SALON</small></span></div><p>© 2026 Bun-Bun Hair Salon.</p></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Bun-Bun Hair Salon — professional beauty services in Lundazi and Lusaka.">
+<title>About Us | Bun-Bun Hair Salon</title>
+<style>
+:root{--ink:#171318;--pink:#8f285f;--accent:#ae2f70;--soft:#fff6fb;--line:#efd9e6;--muted:#625b60}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);padding:16px 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{color:var(--pink);font-weight:900;font-size:22px;letter-spacing:.5px;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-weight:700}
+nav a:hover,nav a.active{color:var(--pink)}
+.book-top{background:var(--accent);color:#fff!important;padding:9px 16px;border-radius:24px}
+.hero{text-align:center;padding:70px 6% 55px;background:linear-gradient(135deg,#fde7f1,#fff8fc)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:800;font-size:13px}
+h1{font-size:clamp(40px,8vw,64px);line-height:1.05;margin:10px 0 15px}
+.hero h1 em,.story h2 em{color:var(--pink);font-family:Georgia,serif;font-weight:500}
+.hero p{max-width:700px;margin:auto;color:var(--muted);font-size:17px}
+.story{max-width:1050px;margin:auto;padding:65px 5%;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story-visual{min-height:360px;border-radius:30px;background:linear-gradient(145deg,#f7d7e6,#fff4f9);position:relative;overflow:hidden}
+.circle{position:absolute;width:250px;height:250px;border-radius:50%;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 18px 45px rgba(120,35,80,.12)}
+.badge{position:absolute;left:24px;top:24px;background:var(--pink);color:#fff;padding:10px 15px;border-radius:20px;font-size:12px;font-weight:900;letter-spacing:2px}
+.story h2{font-size:38px;line-height:1.15;margin:8px 0 17px}
+.story p{color:var(--muted);margin-bottom:14px}
+.values{background:var(--soft);padding:60px 5%}
+.values-inner{max-width:1050px;margin:auto;text-align:center}
+.values-inner>span{font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:800}
+.values-inner h2{font-size:35px;margin:8px 0 30px}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.value{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px}
+.value-icon{font-size:34px}
+.value h3{color:var(--pink);margin:8px 0}
+.value p{color:var(--muted)}
+.locations{max-width:1050px;margin:auto;padding:60px 5%}
+.locations h2{text-align:center;font-size:34px;margin-bottom:25px}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.location{border:1px solid var(--line);border-radius:20px;padding:24px}
+.location strong{display:block;margin-bottom:5px}
+.location span{color:var(--muted)}
+.cta{margin:0 5% 60px;padding:45px 25px;text-align:center;border-radius:27px;background:var(--pink);color:#fff}
+.cta h2{font-size:32px;margin-bottom:8px}
+.cta p{opacity:.9}
+.btn{display:inline-block;margin-top:17px;padding:12px 21px;border-radius:30px;background:#fff;color:var(--pink);text-decoration:none;font-weight:900}
+footer{text-align:center;padding:25px;background:#171318;color:#fff}
+@media(max-width:750px){
+ header{padding:14px 5%}.logo{font-size:18px}nav{gap:10px}nav a:not(.book-top){display:none}
+ .hero{padding:55px 6% 45px}.hero p{font-size:16px}
+ .story{grid-template-columns:1fr;padding:45px 5%;gap:28px}.story-visual{min-height:280px}.story h2{font-size:32px}
+ .value-grid,.location-grid{grid-template-columns:1fr}.values{padding:45px 5%}.locations{padding:45px 5%}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">BUN-BUN HAIR SALON</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Booking</a>
+    <a class="active" href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a class="book-top" href="booking.html">Book Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">ABOUT BUN-BUN</div>
+  <h1>Beauty with care<br><em>and confidence.</em></h1>
+  <p>Bun-Bun Hair Salon is a new beauty destination focused on professional styling, personal care and helping every client feel confident in their look.</p>
+</section>
+
+<section class="story">
+  <div class="story-visual">
+    <div class="badge">BUN-BUN</div>
+    <div class="circle"></div>
+  </div>
+  <div>
+    <span class="eyebrow">OUR STORY</span>
+    <h2>Your beauty is<br><em>our craft.</em></h2>
+    <p>Bun-Bun Hair Salon was created to make professional beauty services simple, comfortable and accessible.</p>
+    <p>We offer hair dressing, makeup, manicure and pedicure services for everyday looks, special occasions and personal style.</p>
+    <p>As a growing salon, we are building our portfolio one client and one beautiful look at a time.</p>
+  </div>
+</section>
+
+<section class="values">
+  <div class="values-inner">
+    <span>WHAT MATTERS TO US</span>
+    <h2>A salon experience built around you.</h2>
+    <div class="value-grid">
+      <article class="value"><div class="value-icon">✦</div><h3>Style</h3><p>We help you choose and create looks that suit your personal style and occasion.</p></article>
+      <article class="value"><div class="value-icon">♡</div><h3>Care</h3><p>We aim to make every visit comfortable, welcoming and focused on your needs.</p></article>
+      <article class="value"><div class="value-icon">✓</div><h3>Confidence</h3><p>Our goal is simple: help you leave feeling good about how you look.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="locations">
+  <h2>Where to Find Bun-Bun</h2>
+  <div class="location-grid">
+    <div class="location"><strong>📍 Upstairs Area, Lundazi</strong><span>Visit us in Lundazi for your beauty appointment.</span></div>
+    <div class="location"><strong>📍 Kanyama Site, Lusaka</strong><span>Visit us in Kanyama, Lusaka.</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready for your next look?</h2>
+  <p>Choose a service and send us your appointment request.</p>
+  <a class="btn" href="booking.html">Book an Appointment →</a>
+</section>
+
+<footer>© 2026 Bun-Bun Hair Salon · Lundazi & Lusaka</footer>
+</body>
+</html>
